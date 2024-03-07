@@ -54,7 +54,7 @@ private TableView tableViewProductos;
             cargarTableViewProductos();
         }
     }
-
+    //Refrescos
     @FXML
     private void btnRefrescoCocaCola() {
         aniadirNuevoPedido("Coca-Cola");
@@ -77,6 +77,54 @@ private TableView tableViewProductos;
     @FXML
     private void btnRefrescoPepsi() {
         aniadirNuevoPedido("Pepsi");
+    }
+
+    //Cervezas
+    @FXML
+    private void btnRefrescoCopaCerveza() {
+        aniadirNuevoPedido("Copa Cerveza");
+    }
+    @FXML
+    private void btnRefrescoTercioEstrella() {
+        aniadirNuevoPedido("Tercio Estrella Galicia");
+    }
+    @FXML
+    private void btnRefrescoTercioEstrellaEspecial() {
+        aniadirNuevoPedido("Tercio Estrella Especial 1906");
+    }
+    @FXML
+    private void btnRefrescoTercioVolDam() {
+        aniadirNuevoPedido("Tercio Cerveza Especial Voll Damm");
+    }
+    @FXML
+    private void btnRefrescoTercioEstrellaNegra() {
+        aniadirNuevoPedido("Tercio Estrella Galicia Sin Alcohol Negra");
+    }
+    @FXML
+    private void btnRefrescoTercioEstrellaTostada() {aniadirNuevoPedido("Tercio Estrella Galicia Sin Alcohol Tostada");}
+
+
+
+    //Comidas
+    @FXML
+    private void btnRacionNachos() {
+        aniadirNuevoPedido("Racion Nachos Con Queso Y Salsa Guacamole");
+    }
+    @FXML
+    private void btnRacionAlitas() {
+        aniadirNuevoPedido("Racion Alitas De Pollo Y Salsa BQQ");
+    }
+    @FXML
+    private void btnBocadilloCalamares() {
+        aniadirNuevoPedido("Bocadillo Calamares Con Ali-Oli");
+    }
+    @FXML
+    private void btnHamburguesa() {
+        aniadirNuevoPedido("Hamburguesa Completa");
+    }
+    @FXML
+    private void btnSandwich() {
+        aniadirNuevoPedido("Sandwich Mixto");
     }
 
     @FXML

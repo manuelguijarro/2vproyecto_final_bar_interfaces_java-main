@@ -1,5 +1,7 @@
 package org.example;
 
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -20,7 +22,7 @@ import static org.example.PrimaryController.nombreMesa;
 import static org.example.db.DBHelper.*;
 
 public class HistoricoController implements Initializable {
-
+public static int idMesaHistorico;
 
 @FXML
 private TableView tableViewMesas;
@@ -37,27 +39,34 @@ private TableView tableViewMesas;
     }
 
     private void cargarTableViewMesas() {
-
-
-        //obtener una lista con todas las mesas
+        // Obtener una lista con todas las mesas
         LinkedList<Mesa> mesas = obtenerDatosMesaActual();
 
         tableViewMesas.getColumns().clear();
 
-
-        TableColumn<Producto, Integer> colidMesa = new TableColumn<>("MESA ID");
-        TableColumn<Producto, String> colNombreMesa = new TableColumn<>("NOMBRE MESA");
-        TableColumn<Producto, Double> colPrecioTotal = new TableColumn<>("TOTAL MESA");
-
+        TableColumn<Mesa, Integer> colidMesa = new TableColumn<>("MESA ID");
+        TableColumn<Mesa, String> colNombreMesa = new TableColumn<>("NOMBRE MESA");
+        TableColumn<Mesa, Double> colPrecioTotal = new TableColumn<>("TOTAL MESA");
 
         colidMesa.setCellValueFactory(new PropertyValueFactory<>("id"));
         colNombreMesa.setCellValueFactory(new PropertyValueFactory<>("nombreMesa"));
         colPrecioTotal.setCellValueFactory(new PropertyValueFactory<>("totalGastado"));
 
         tableViewMesas.getColumns().addAll(colidMesa, colNombreMesa, colPrecioTotal);
-
         ObservableList<Mesa> mesasObservableList = FXCollections.observableArrayList(mesas);
         tableViewMesas.setItems(mesasObservableList);
+
+        // Agregar un listener al evento de selección del TableView
+        // Agregar un listener al evento de selección del TableView
+        tableViewMesas.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
+            if (newSelection != null) {
+                // Hacer un casting a Mesa
+                Mesa selectedMesa = (Mesa) newSelection;
+                // Obtener el dato de la primera columna del elemento seleccionado
+                idMesaHistorico = selectedMesa.getId();
+                System.out.println("ID de la mesa seleccionada: " + idMesaHistorico);
+            }
+        });
     }
 
     @Override

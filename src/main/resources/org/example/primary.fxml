@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1330.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.PrimaryController">
+   <children>
+      <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="752.0" prefWidth="1330.0">
+         <children>
+            <Pane prefHeight="752.0" prefWidth="893.0" style="-fx-background-color: #8ae429;">
+               <children>
+                  <Pane fx:id="mesa_2" layoutX="51.0" layoutY="218.0" onMouseClicked="#seleccionarMesa2" prefHeight="167.0" prefWidth="167.0" style="-fx-background-color: green;">
+                     <children>
+                        <Text layoutX="46.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="mesa 2" textAlignment="CENTER" wrappingWidth="75.13671875">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Text>
+                        <ImageView fitHeight="141.0" fitWidth="112.0" layoutX="28.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/mesa_bar.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="mesa_3" layoutX="51.0" layoutY="14.0" onMouseClicked="#seleccionarMesa3" prefHeight="167.0" prefWidth="167.0" style="-fx-background-color: green;">
+                     <children>
+                        <Text layoutX="46.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="mesa 3" textAlignment="CENTER" wrappingWidth="75.13671875">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Text>
+                        <ImageView fitHeight="141.0" fitWidth="112.0" layoutX="28.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/mesa_bar.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="mesa_1" layoutX="51.0" layoutY="423.0" onMouseClicked="#seleccionarMesa1" prefHeight="167.0" prefWidth="167.0" style="-fx-background-color: green;">
+                     <children>
+                        <Text layoutX="46.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="mesa 1" textAlignment="CENTER" wrappingWidth="75.13671875">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Text>
+                        <ImageView fitHeight="141.0" fitWidth="112.0" layoutX="28.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/mesa_bar.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Line endX="100.0" layoutX="214.0" layoutY="748.0" startX="100.0" startY="-90.0" stroke="#d16643" strokeWidth="25.0" />
+                  <Line endX="100.0" layoutX="521.0" layoutY="748.0" startX="100.0" startY="-90.0" stroke="#d16643" strokeWidth="25.0" />
+                  <Line endX="100.0" layoutX="216.0" layoutY="664.0" startX="392.5" stroke="#d16643" strokeWidth="65.0" />
+                  <Pane fx:id="mesa_4" layoutX="357.0" layoutY="14.0" onMouseClicked="#seleccionarMesa4" prefHeight="167.0" prefWidth="167.0" style="-fx-background-color: green;">
+                     <children>
+                        <Text layoutX="46.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="mesa 4" textAlignment="CENTER" wrappingWidth="75.13671875">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Text>
+                        <ImageView fitHeight="141.0" fitWidth="112.0" layoutX="28.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/mesa_bar.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="mesa_5" layoutX="652.0" layoutY="14.0" onMouseClicked="#seleccionarMesa5" prefHeight="167.0" prefWidth="167.0" style="-fx-background-color: green;">
+                     <children>
+                        <Text layoutX="46.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="mesa 5" textAlignment="CENTER" wrappingWidth="75.13671875">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Text>
+                        <ImageView fitHeight="141.0" fitWidth="112.0" layoutX="28.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/mesa_bar.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="mesa_6" layoutX="652.0" layoutY="218.0" onMouseClicked="#seleccionarMesa6" prefHeight="167.0" prefWidth="167.0" style="-fx-background-color: green;">
+                     <children>
+                        <Text layoutX="46.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="mesa 6" textAlignment="CENTER" wrappingWidth="75.13671875">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Text>
+                        <ImageView fitHeight="141.0" fitWidth="112.0" layoutX="28.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/mesa_bar.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="mesa_7" layoutX="652.0" layoutY="423.0" onMouseClicked="#seleccionarMesa7" prefHeight="167.0" prefWidth="167.0" style="-fx-background-color: green;">
+                     <children>
+                        <Text layoutX="46.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="mesa 7" textAlignment="CENTER" wrappingWidth="75.13671875">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Text>
+                        <ImageView fitHeight="141.0" fitWidth="112.0" layoutX="28.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/mesa_bar.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Text fx:id="textoMensaje" fill="#f50303" layoutX="421.0" layoutY="381.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children></Pane>
+            <VBox prefHeight="752.0" prefWidth="465.0" style="-fx-background-color: #f46d50;">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#btnAbrirMesa" prefHeight="54.0" prefWidth="470.0" style="-fx-background-radius: 50;" text="ABRIR MESA">
+                     <VBox.margin>
+                        <Insets top="50.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="54.0" prefWidth="476.0" style="-fx-background-radius: 50;" text="GENERAR HISTORICO">
+                     <VBox.margin>
+                        <Insets top="50.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="251.0" fitWidth="465.0" pickOnBounds="true" preserveRatio="true">
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                     <image>
+                        <Image url="@img/logobar.png" />
+                     </image>
+                  </ImageView>
+                  <Button mnemonicParsing="false" prefHeight="54.0" prefWidth="467.0" style="-fx-background-radius: 50;" text="REINICIAR MESA">
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#btnCerrarAplicacion" prefHeight="54.0" prefWidth="467.0" style="-fx-background-radius: 50;" text="CERRAR APLICACION">
+                     <VBox.margin>
+                        <Insets top="50.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

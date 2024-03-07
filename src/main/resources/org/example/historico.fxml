@@ -17,7 +17,7 @@
             <children>
                 <VBox prefHeight="852.0" prefWidth="1027.0">
                     <children>
-                        <TableView fx:id="tableViewHistorico" prefHeight="848.0" prefWidth="1027.0">
+                        <TableView fx:id="tableViewMesas" prefHeight="848.0" prefWidth="1027.0">
                             <columns>
 
                             </columns>

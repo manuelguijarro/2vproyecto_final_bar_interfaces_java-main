@@ -61,7 +61,30 @@ public class DBHelper {
         }
         return null;
     }
+    public static LinkedList<Mesa> obtenerDatosMesaActual() {
 
+        LinkedList<Mesa>mesas = new LinkedList<>();
+        try {
+            Connection conexion = obtenerConexionDB();
+
+            Statement statement = conexion.createStatement();
+            ResultSet resultSet = statement.executeQuery("SELECT * FROM Mesas;");
+            while (resultSet.next()) {
+
+                int idMesaActual = resultSet.getInt("id_mesa");
+                String nombreMesaActual = resultSet.getString("nombre_mesa");
+                Double totalGastadoMesa = resultSet.getDouble("total_gastado");
+                mesas.add(new Mesa(idMesaActual,nombreMesaActual,totalGastadoMesa));
+            }
+
+
+            conexion.close();
+            return mesas;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
     public static boolean aniadirPedidoActualDB(Pedido pedidoActual) {
 
         try {

@@ -139,9 +139,14 @@ private TableView tableViewProductos;
     private void cobrarMesa() throws JRException, SQLException {
         String mesaActual = nombreMesa;
         Mesa mesa = obtenerDatosMesaActual(mesaActual);
-
-        crearMesaHistoricoDB(mesa.getNombreMesa(),mesa.getTotalGastado());
-
+        LinkedList<Pedido> pedidos = obtenerPedidosMesaActual(mesa.getId());
+        Mesa mesaResultado = crearMesaHistoricoDB(mesa.getNombreMesa(),mesa.getTotalGastado());
+        LinkedList<Producto> productos = obtenerProductosMesaActual(pedidos);
+        //Crear una sentencia con los pedidos de esa mesa actual, añadiendolos a el historico
+        //insertar en tabla pedidos el id de la mesa que hemos insertado : mesaResultado.getId
+        //y el id de los productos de la mesa actual.
+        //Asi la quedamos guardada en una relacion para el historico.
+        crearPedidoHistoricoDB(productos,mesaResultado.getId());
         reiniciarMesaActual();
     }
 

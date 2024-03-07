@@ -79,32 +79,42 @@ public class PrimaryController implements Initializable {
 
     }
 
-    public void btnAbrirMesa()  {
-        if (nombreMesa !=null){
+    @FXML
+    public void btnAbrirMesa() {
+        if (nombreMesa != null) {
             try {
                 App.setRoot("secondary");
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
-        }else{
+        } else {
             textoMensaje.setText("¡Selecciona una mesa para abrir!");
         }
 
     }
 
+    @FXML
+    public void btnAbrirHistoricos() {
+        try {
+            App.setRoot("historico");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        Pane[] listaPane = {mesa_1,mesa_2,mesa_3,mesa_4,mesa_5,mesa_6,mesa_7};
+        Pane[] listaPane = {mesa_1, mesa_2, mesa_3, mesa_4, mesa_5, mesa_6, mesa_7};
         cargarVistaMesasOcupadas(listaPane);
 
     }
 
     private void cargarVistaMesasOcupadas(Pane[] listaPane) {
-        for (int i=1; i<8;i++){
-            if(!obtenerPedidosMesaActual(i).isEmpty()){
-                listaPane[i-1].setStyle("-fx-background-color: red;");
-            }else{
-                listaPane[i-1].setStyle("-fx-background-color: green;");
+        for (int i = 1; i < 8; i++) {
+            if (!obtenerPedidosMesaActual(i).isEmpty()) {
+                listaPane[i - 1].setStyle("-fx-background-color: red;");
+            } else {
+                listaPane[i - 1].setStyle("-fx-background-color: green;");
             }
         }
     }

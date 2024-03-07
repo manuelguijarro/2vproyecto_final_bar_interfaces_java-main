@@ -28,6 +28,15 @@ CREATE TABLE Mesas_Actuales (
     total_gastado DECIMAL(10, 2) DEFAULT 0
 );
 
+DROP TABLE IF EXISTS Pedidos;
+CREATE TABLE Pedido (
+    id_pedido INT AUTO_INCREMENT PRIMARY KEY,
+    id_mesa INT NOT NULL,
+    id_producto INT NOT NULL,
+    FOREIGN KEY (id_mesa) REFERENCES Mesas(id_mesa),
+    FOREIGN KEY (id_producto) REFERENCES Productos(id_producto)
+);
+
 DROP TABLE IF EXISTS Pedidos_Actuales;
 CREATE TABLE Pedidos_Actuales (
     id_pedido INT AUTO_INCREMENT PRIMARY KEY,

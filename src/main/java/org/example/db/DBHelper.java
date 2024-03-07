@@ -83,6 +83,29 @@ public class DBHelper {
         }
         return false;
     }
+    public static boolean crearPedidoHistoricoDB(LinkedList<Producto>productos, int mesaId) {
+        int filasInsertadas=0;
+        for (Producto producto:productos) {
+            try {
+                Connection conexion = obtenerConexionDB();
+
+                String sql = "INSERT INTO Pedido (id_mesa, id_producto) VALUES (?, ?)";
+                PreparedStatement preparedStatement = conexion.prepareStatement(sql);
+
+                preparedStatement.setInt(1, mesaId);
+                preparedStatement.setInt(2, producto.getId());
+
+                 filasInsertadas = preparedStatement.executeUpdate();
+
+                conexion.close();
+
+
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return filasInsertadas > 0;
+    }
 
     public static LinkedList<Pedido> obtenerPedidosMesaActual(int mesaActualID) {
 

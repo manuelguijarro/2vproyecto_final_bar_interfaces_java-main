@@ -133,6 +133,13 @@ private TableView tableViewProductos;
     }
 
 
+    @FXML
+    private void borrarProducto() throws IOException {
+        String mesaActual = nombreMesa;
+        String idMesaActual = mesaActual.split("_")[1];
+        borrarProductoEspecifico(Integer.parseInt(idMesaActual),idProductoSeleccionado);
+        cargarTableViewProductos();
+    }
 
 
     @FXML

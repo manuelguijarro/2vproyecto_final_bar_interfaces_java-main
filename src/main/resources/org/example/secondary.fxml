@@ -240,7 +240,7 @@
                   <VBox prefHeight="362.0" prefWidth="318.0">
                      <children>
                         <Separator orientation="VERTICAL" prefHeight="192.0" prefWidth="27.0" />
-                        <Button mnemonicParsing="false" prefHeight="54.0" prefWidth="476.0" style="-fx-background-radius: 50;" text="BORRAR PRODUCTO">
+                        <Button onMouseClicked="#borrarProducto" mnemonicParsing="false" prefHeight="54.0" prefWidth="476.0" style="-fx-background-radius: 50;" text="BORRAR PRODUCTO">
                            <font>
                               <Font name="System Bold" size="24.0" />
                            </font>

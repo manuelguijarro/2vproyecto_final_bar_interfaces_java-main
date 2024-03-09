@@ -27,7 +27,7 @@ public class SecondaryController implements Initializable {
 @FXML
 private Text textoTotalMesa;
 
-
+public static int idProductoSeleccionado;
 @FXML
 private TableView tableViewProductos;
 
@@ -171,20 +171,34 @@ private TableView tableViewProductos;
 
         tableViewProductos.getColumns().clear();
 
-
+        TableColumn<Producto, String> colIdProducto = new TableColumn<>("ID PRODUCTO");
         TableColumn<Producto, String> colNombreProducto = new TableColumn<>("NOMBRE PRODUCTO");
         TableColumn<Producto, String> colCategoriaProducto = new TableColumn<>("CATEGORIA PRODUCTO");
         TableColumn<Producto, Double> colPrecioProducto = new TableColumn<>("PRECIO PRODUCTO");
 
-
+        colIdProducto.setCellValueFactory(new PropertyValueFactory<>("id"));
         colNombreProducto.setCellValueFactory(new PropertyValueFactory<>("nombreProducto"));
         colCategoriaProducto.setCellValueFactory(new PropertyValueFactory<>("categoriaProducto"));
         colPrecioProducto.setCellValueFactory(new PropertyValueFactory<>("precioProducto"));
 
-        tableViewProductos.getColumns().addAll(colNombreProducto, colCategoriaProducto, colPrecioProducto);
+        tableViewProductos.getColumns().addAll(colIdProducto,colNombreProducto, colCategoriaProducto, colPrecioProducto);
 
         ObservableList<Producto> productosObservableList = FXCollections.observableArrayList(productos);
         tableViewProductos.setItems(productosObservableList);
+
+        // Agregar un listener al evento de selección del TableView
+        // Agregar un listener al evento de selección del TableView
+        tableViewProductos.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
+            if (newSelection != null) {
+                // Hacer un casting a Mesa
+                Producto selectedProducto = (Producto) newSelection;
+                // Obtener el dato de la primera columna del elemento seleccionado
+                idProductoSeleccionado = selectedProducto.getId();
+                System.out.println("ID producto seleccioando: " + idProductoSeleccionado);
+            }else{
+                System.out.println("error");
+            }
+        });
     }
     @Override
     public void initialize(URL location, ResourceBundle resources) {

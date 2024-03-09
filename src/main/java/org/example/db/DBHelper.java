@@ -180,7 +180,31 @@ public class DBHelper {
         // Si ocurre una excepción o no se borra ninguna fila, retornamos falso
         return false;
     }
+    public static boolean borrarProductoEspecifico(int idMesaActual, int idProducto) {
 
+        try {
+            Connection conexion = obtenerConexionDB();
+
+            // Creamos la sentencia SQL para borrar el producto específico
+            String sql = "DELETE FROM Pedidos_Actuales WHERE id_mesa_actual=? AND id_producto=? LIMIT 1";
+            PreparedStatement preparedStatement = conexion.prepareStatement(sql);
+            preparedStatement.setInt(1, idMesaActual);
+            preparedStatement.setInt(2, idProducto);
+
+            // Ejecutamos la sentencia SQL y obtenemos el número de filas afectadas
+            int filasBorradas = preparedStatement.executeUpdate();
+
+            conexion.close();
+
+            // Si se borró una fila, retornamos verdadero
+            return filasBorradas == 1;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        // Si ocurre una excepción o no se borra ninguna fila, retornamos falso
+        return false;
+    }
     public static boolean actualizarPrecioTotalMesaActual(int idMesa) {
 
         try {

@@ -15,7 +15,13 @@
 - Actualización de imágenes para nuestro bar.
   - [manuelguijarro]
 
-## [Fecha]
+## [Mar 6, 2024]
 
 - Actualización de datos.
   - [manuelguijarro]
+ 
+  ## [Mar 5, 2024]
+
+- Recuperacion de proyecto desde repositorio git.
+  - [manuelguijarro]
+

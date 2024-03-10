@@ -52,6 +52,10 @@ INSERT INTO Productos (nombre_producto, categoria_producto, precio_producto) VAL
 INSERT INTO Productos (nombre_producto, categoria_producto, precio_producto) VALUES ('Fanta Naranja', 'Refrescos', 2.00);
 INSERT INTO Productos (nombre_producto, categoria_producto, precio_producto) VALUES ('Fanta Limon', 'Refrescos', 2.00);
 
+/*Cafes*/
+INSERT INTO Productos (nombre_producto, categoria_producto, precio_producto) VALUES ('Café con leche', 'Café', 1.20);
+INSERT INTO Productos (nombre_producto, categoria_producto, precio_producto) VALUES ('Café solo', 'Café', 1.20);
+
 /*Cervezas*/
 INSERT INTO Productos (nombre_producto, categoria_producto, precio_producto) VALUES ('Copa Cerveza', 'Cervezas', 3.50);
 INSERT INTO Productos (nombre_producto, categoria_producto, precio_producto) VALUES ('Tercio Estrella Galicia', 'Cervezas', 4.00);

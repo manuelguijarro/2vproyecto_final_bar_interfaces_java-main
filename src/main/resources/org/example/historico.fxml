@@ -30,12 +30,17 @@
                             <children>
                                 <Separator orientation="VERTICAL" prefHeight="192.0" prefWidth="27.0" />
                                 <Separator orientation="VERTICAL" prefHeight="493.0" prefWidth="0.0" />
-                                <Button mnemonicParsing="false" onMouseClicked="#verHistoricoMesa" prefHeight="54.0" prefWidth="476.0" style="-fx-background-radius: 50;" text="VER HISTORICO MESA">
+                                <Button fx:id="generarHistoricoID" mnemonicParsing="false" onMouseClicked="#verHistoricoMesa" prefHeight="54.0" prefWidth="476.0" style="-fx-background-radius: 50;" text="GENERAR HISTORICO">
                                     <font>
                                         <Font name="System Bold" size="24.0" />
                                     </font>
                                 </Button>
                                 <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <Button mnemonicParsing="false" onMouseClicked="#verHistoricoMesa" prefHeight="54.0" prefWidth="476.0" style="-fx-background-radius: 50;" text="VER HISTORICO MESA">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Button>
                             </children>
                         </VBox>
                         <VBox prefHeight="494.0" prefWidth="318.0">

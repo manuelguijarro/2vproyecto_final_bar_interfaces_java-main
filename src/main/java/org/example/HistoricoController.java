@@ -34,12 +34,12 @@ private TableView tableViewMesas;
 
 
     @FXML
-    private void verHistoricoMesa(){
+    private void verHistoricoMesa() throws IOException {
 
+        App.setRoot("historicomesa");
     }
 
     private void cargarTableViewMesas() {
-        // Obtener una lista con todas las mesas
         LinkedList<Mesa> mesas = obtenerDatosMesaActual();
 
         tableViewMesas.getColumns().clear();
@@ -56,15 +56,12 @@ private TableView tableViewMesas;
         ObservableList<Mesa> mesasObservableList = FXCollections.observableArrayList(mesas);
         tableViewMesas.setItems(mesasObservableList);
 
-        // Agregar un listener al evento de selección del TableView
-        // Agregar un listener al evento de selección del TableView
+
         tableViewMesas.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
             if (newSelection != null) {
-                // Hacer un casting a Mesa
                 Mesa selectedMesa = (Mesa) newSelection;
-                // Obtener el dato de la primera columna del elemento seleccionado
+
                 idMesaHistorico = selectedMesa.getId();
-                System.out.println("ID de la mesa seleccionada: " + idMesaHistorico);
             }
         });
     }

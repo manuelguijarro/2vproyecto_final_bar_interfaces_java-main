@@ -155,6 +155,34 @@ public class DBHelper {
         }
         return null;
     }
+    public static LinkedList<Pedido> obtenerPedidosMesa(int mesaID) {
+
+        LinkedList<Pedido> pedidos = new LinkedList<>();
+        try {
+            Connection conexion = obtenerConexionDB();
+
+            PreparedStatement statement = conexion.prepareStatement("SELECT * FROM Pedido WHERE id_mesa = ?");
+            statement.setInt(1, mesaID);
+            ResultSet resultSet = statement.executeQuery();
+            while (resultSet.next()) {
+                Pedido pedido = new Pedido();
+                int idPedido = resultSet.getInt("id_pedido");
+                int idProducto = resultSet.getInt("id_producto");
+                // Agregar más columnas según la estructura de tu tabla Pedido
+
+                pedido.setIdMesaActual(mesaID);
+                pedido.setIdProducto(idProducto);
+                // Agregar más setters según la estructura de tu clase Pedido
+                pedidos.add(pedido);
+            }
+
+            conexion.close();
+            return pedidos;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 
     public static boolean borrarPedidosMesaActual(int idMesaActual) {
 

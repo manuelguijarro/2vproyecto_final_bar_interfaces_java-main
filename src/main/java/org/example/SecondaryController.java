@@ -79,6 +79,18 @@ private TableView tableViewProductos;
         aniadirNuevoPedido("Pepsi");
     }
 
+    //Cafes
+
+    @FXML
+    private void btnCafeConLeche() {
+        aniadirNuevoPedido("Café con leche");
+    }
+
+    @FXML
+    private void btnCafeSolo() {
+        aniadirNuevoPedido("Café solo");
+    }
+
     //Cervezas
     @FXML
     private void btnRefrescoCopaCerveza() {

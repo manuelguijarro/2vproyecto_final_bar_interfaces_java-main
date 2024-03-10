@@ -19,7 +19,6 @@ public class App extends Application {
     @Override
     public void start(Stage stage) throws IOException {
 
-        // Obtener la pantalla principala
 
         Screen screen = Screen.getPrimary();
 

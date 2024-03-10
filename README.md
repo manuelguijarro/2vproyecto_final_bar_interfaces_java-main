@@ -18,7 +18,7 @@ git clone https://github.com/manuelguijarro/2vproyecto_final_bar_interfaces_java
 - Importa el proyecto y espera a que se descarguen las dependencias.
 
 ### Ejecutar la aplicación
-- Busca la clase principal de la aplicación (por ejemplo, `Main.java`) y ejecútala como una aplicación Java.
+- Busca la clase principal de la aplicación (`App.java`) y ejecútala como una aplicación Java.
 
 ## Uso
 
